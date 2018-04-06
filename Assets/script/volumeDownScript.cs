@@ -34,7 +34,7 @@ public class volumeDownScript : MonoBehaviour {
             GameObject.Find("Music").GetComponent<AudioSource>().Stop();
             switchToLevel();
         }
-
+        //
     }
 
     void switchToLevel()
