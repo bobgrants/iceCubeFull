@@ -11,7 +11,6 @@ public class lvl01Button : MonoBehaviour {
 
     void Start()
     {
-        
         Button btn = this.GetComponent<Button>();
         btn.onClick.AddListener(OnClick);
     }

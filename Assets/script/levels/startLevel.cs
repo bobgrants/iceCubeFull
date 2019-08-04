@@ -8,7 +8,7 @@ public class startLevel : MonoBehaviour {
     GameObject gameManager;
     public bool zoomed;
 
-    float timerStart;
+    public float timerStart;
 
 	// Use this for initialization
 	void Start () {
@@ -20,7 +20,7 @@ public class startLevel : MonoBehaviour {
     }
 	
 	// Update is called once per frame
-	void Update () {
+	public void Update () {
         if (Input.touchCount > 0 && zoomed == false) //firstly, check if a touch has been made
         {
             Touch touch = Input.GetTouch(0);

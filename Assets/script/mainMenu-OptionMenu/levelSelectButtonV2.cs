@@ -13,23 +13,19 @@ public class levelSelectButtonV2 : MonoBehaviour {
     public Button backMainMenu;
     public Button optionBtn;
     public Button stopMusic;
+    public Button rateUsBtn;
 
     public Image title;
     public Image title2;
 
-    public GameObject anchor1;
-    public GameObject anchor2;
-    public GameObject anchor3;
     public GameObject ensemble;
 
-    public Rigidbody2D anchorRB;
-
-    float camMovementSpeed;
+    //float camMovementSpeed;
 
     public string camPosition;
 
     bool levelSelectClick;
-    bool levelSelectDisplayed;
+    //bool levelSelectDisplayed;
 
     void Start()
     {
@@ -41,12 +37,12 @@ public class levelSelectButtonV2 : MonoBehaviour {
         Button btnbackMainMenu = backMainMenu.GetComponent<Button>();
         btnbackMainMenu.onClick.AddListener(OnClickBackMainMenu);
 
-        camMovementSpeed = 2.5f;
+        //camMovementSpeed = 2.5f;
 
         camPosition = "MainMenu";
 
         levelSelectClick = false;
-        levelSelectDisplayed = false;
+        //levelSelectDisplayed = false;
     }
 
 
@@ -90,6 +86,8 @@ public class levelSelectButtonV2 : MonoBehaviour {
         stopMusic.gameObject.SetActive(false);
         title.gameObject.SetActive(false);
         title2.gameObject.SetActive(false);
+        rateUsBtn.gameObject.SetActive(false);
+
     }
 
     void OnClickBackMainMenu()
@@ -109,6 +107,7 @@ public class levelSelectButtonV2 : MonoBehaviour {
         stopMusic.gameObject.SetActive(true);
         title.gameObject.SetActive(true);
         title2.gameObject.SetActive(true);
+        rateUsBtn.gameObject.SetActive(true);
 
     }
 }

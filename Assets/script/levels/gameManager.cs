@@ -22,10 +22,10 @@ public class gameManager : MonoBehaviour {
     string currentScene;
 
     GameObject sf1, sf2, sf3;
-    GameObject sf1Particle, sf2Particle, sf3Particle;
+    //GameObject sf1Particle, sf2Particle, sf3Particle;
     GameObject sf1CollectedPoint, sf2CollectedPoint, sf3CollectedPoint;
 
-    Camera cam;
+    //Camera cam;
 
 
     void Awake()
@@ -56,7 +56,7 @@ public class gameManager : MonoBehaviour {
         PlayerPrefs.SetString("currentScene", SceneManager.GetActiveScene().name);
 
 
-        findCamera();
+        //findCamera();
         loadGameObjects();
         //loadCollectedStatus();
 
@@ -72,17 +72,17 @@ public class gameManager : MonoBehaviour {
         collectionAnimation();
     }
 
-    void findCamera()
-    {
-        if (GameObject.Find("Main Camera") != null)
-        {
-            cam = GameObject.Find("Main Camera").GetComponent<Camera>();
-        }
-        else if (GameObject.Find("Main CameraSand") != null)
-        {
-            cam = GameObject.Find("Main CameraSand").GetComponent<Camera>();
-        }
-    }
+    //void findCamera()
+    //{
+    //    if (GameObject.Find("Main Camera") != null)
+    //    {
+    //        cam = GameObject.Find("Main Camera").GetComponent<Camera>();
+    //    }
+    //    else if (GameObject.Find("Main CameraSand") != null)
+    //    {
+    //        cam = GameObject.Find("Main CameraSand").GetComponent<Camera>();
+    //    }
+    //}
 
     void FixedUpdate() {
         if (gameStarted == true && fallStop == false)
@@ -102,9 +102,9 @@ public class gameManager : MonoBehaviour {
         sf2CollectedPoint = GameObject.Find("snowflakeCollected2");
         sf3CollectedPoint = GameObject.Find("snowflakeCollected3");
 
-        sf1Particle = sf1.transform.GetChild(0).gameObject;
-        sf2Particle = sf2.transform.GetChild(0).gameObject;
-        sf3Particle = sf3.transform.GetChild(0).gameObject;
+        //sf1Particle = sf1.transform.GetChild(0).gameObject;
+        //sf2Particle = sf2.transform.GetChild(0).gameObject;
+        //sf3Particle = sf3.transform.GetChild(0).gameObject;
     }
 
     void loadCollectedStatus()
@@ -170,7 +170,7 @@ public class gameManager : MonoBehaviour {
         }
     }
 
-    public void registerCollection()
+    public void registerCollection() 
     {
         if(PlayerPrefs.GetString(SceneManager.GetActiveScene().name + "sf1") != "collected" || PlayerPrefs.GetString(SceneManager.GetActiveScene().name + "sf2") != "collected" || PlayerPrefs.GetString(SceneManager.GetActiveScene().name + "sf3") != "collected")
         {

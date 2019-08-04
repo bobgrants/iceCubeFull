@@ -50,14 +50,12 @@ public class transitionScreenScript : MonoBehaviour {
 
             bestChrono = PlayerPrefs.GetFloat(PlayerPrefs.GetString("currentScene") + "time").ToString();
 
-            Debug.Log("Best Time Updated");
-            Debug.Log("Best Time: " + PlayerPrefs.GetFloat(PlayerPrefs.GetString("currentScene") + "time"));
+            //Debug.Log("Best Time Updated");
+            //Debug.Log("Best Time: " + PlayerPrefs.GetFloat(PlayerPrefs.GetString("currentScene") + "time"));
 
-            Debug.Log(SceneManager.GetActiveScene().name);
-            Debug.Log(PlayerPrefs.GetString("currentScene"));
+            //Debug.Log(SceneManager.GetActiveScene().name);
+            //Debug.Log(PlayerPrefs.GetString("currentScene"));
         }
-
-        
 
         chronoBoxText.text = currentChrono + " seconds";
         bestChronoBoxText.text = "Best: " + bestChrono + " seconds";
@@ -74,7 +72,7 @@ public class transitionScreenScript : MonoBehaviour {
         float screenWidth10p = Screen.width / 10; // 10% 
         float screenWidth15p = Screen.width / 6.5f; // 15% 
         float screenWidth20p = Screen.width / 5; // 20% 
-        float screenWidth33p = Screen.width / 3; // 33% 
+        //float screenWidth33p = Screen.width / 3; // 33% 
 
 
 

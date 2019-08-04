@@ -9,22 +9,21 @@ public class pinchUnzoom : MonoBehaviour
     Camera cam;
 
 
-    GameObject iceCube; //GameObject icecube
-    Vector2 iceCubePos;
+    //GameObject iceCube; //GameObject icecube
+    //Vector2 iceCubePos;
 
     void Start()
     {
         cam  = GetComponent<Camera>();
-        iceCube = GameObject.Find("icecube");
-        iceCubePos = iceCube.transform.position;
+        //iceCube = GameObject.Find("icecube");
+        //iceCubePos = iceCube.transform.position;
     }
 
     void Update()
     {
-        if (GameObject.Find("gameManager").GetComponent<gameManager>().gameStarted == true)
-        {
-            pinchBehavior();
-        }
+
+        pinchBehavior();
+        
         cameraSize();
     }
 
@@ -159,10 +158,9 @@ public class pinchUnzoom : MonoBehaviour
 
     void cameraSize()
     {
-        if (GameObject.Find("gameManager").GetComponent<gameManager>().gameStarted == true)
-        {
-            if (cam.orthographicSize < 2.5f) { cam.orthographicSize = 2.5f; }
-            if (cam.orthographicSize > 4.5f) { cam.orthographicSize = 4.5f; }
-        }
+      
+        if (cam.orthographicSize < 2.5f) { cam.orthographicSize = 2.5f; }
+        if (cam.orthographicSize > 4.5f) { cam.orthographicSize = 4.5f; }
+        
     }
 }

@@ -6,12 +6,12 @@ using UnityEngine.SceneManagement;
 public class cubeFall : MonoBehaviour {
 
     GameObject iceCube;
-    GameObject gameManager;
+    //GameObject gameManager;
     GameObject destroyer;
 
     meltDown md;
-    movementCube mc;
-    gameManager gm;
+    //movementCube mc;
+    //gameManager gm;
 
     bool fallen;
 
@@ -19,12 +19,12 @@ public class cubeFall : MonoBehaviour {
     void Start ()
     {
         iceCube = GameObject.Find("icecube");
-        gameManager = GameObject.Find("gameManager");
+        //gameManager = GameObject.Find("gameManager");
         destroyer = gameObject.transform.GetChild(0).gameObject;
 
         md = iceCube.GetComponent<meltDown>();
-        mc = iceCube.GetComponent<movementCube>();
-        gm = gameManager.GetComponent<gameManager>();
+        //mc = iceCube.GetComponent<movementCube>();
+        //gm = gameManager.GetComponent<gameManager>();
 
         InvokeRepeating("increaseColliderSize", 0.0f, 1.0f);
 

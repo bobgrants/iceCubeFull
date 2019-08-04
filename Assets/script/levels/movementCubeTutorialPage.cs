@@ -6,7 +6,7 @@ public class movementCubeTutorialPage : MonoBehaviour
 
     public float speed;
 
-    GameObject gameManager;
+    //GameObject gameManager;
     GameObject iceCube;
 
     private Rigidbody2D rb;
@@ -18,7 +18,7 @@ public class movementCubeTutorialPage : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         speed = 4000.0f;
 
-        gameManager = GameObject.Find("gameManager");
+        //gameManager = GameObject.Find("gameManager");
         iceCube = GameObject.Find("icecube");
 
         fallStop = false;
